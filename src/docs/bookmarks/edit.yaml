@@ -1,0 +1,35 @@
+Edit a bookmark
+---
+tags:
+  - Bookmarks
+parameters:
+  - name: id
+    description: The desired bookmark id
+    in: header
+    required: true
+  - name: body
+    description: The body should contain the updated bookmark data
+    in: body
+    required: true 
+    schema:
+      type: object
+      required:
+        - "body"
+        - "url"
+      properties:
+        body:
+          type: "string"
+          example: "Google"
+        url:
+          type: "string"
+          example: "www.google.com"
+responses:
+  200:
+    description: When the bookmark was successfully edited
+
+  400:
+    description: Fails to edit due to request data
+
+  404:
+    description: The bookmark id wasn't found
+

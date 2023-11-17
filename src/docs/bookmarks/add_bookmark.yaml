@@ -1,0 +1,33 @@
+Create a new bookmark
+---
+tags:
+  - Bookmarks
+parameters:
+  - in: header
+    name: Authorization
+    required: true
+  - name: body
+    description: The body should contain the bookmark's data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "body"
+        - "url"
+      properties:
+        body:
+          type: "string"
+          example: "Google"
+        url:
+          type: "string"
+          example: "www.google.com"
+responses:
+  201:
+    description: When the bookmark was successfully created
+
+  400:
+    description: When URL is not valid
+
+  409:
+    description: When URL already exists

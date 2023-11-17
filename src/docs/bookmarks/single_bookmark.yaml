@@ -1,0 +1,15 @@
+Get a bookmark's data
+---
+tags:
+  - Bookmarks
+parameters:
+  - name: id
+    description: The desired bookmark id
+    in: header
+    required: true
+responses:
+  204:
+    description: When the bookmark's data was successfully recevied
+
+  404:
+    description: When the bookmark id wasn't found

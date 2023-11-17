@@ -1,0 +1,15 @@
+Delete a bookmark
+---
+tags:
+  - Bookmarks
+parameters:
+  - name: id
+    description: The bookmark's id to delete
+    in: header
+    required: true
+responses:
+  204:
+    description: When the bookmark was successfully deleted
+
+  404:
+    description: When the bookmark id wasn't found

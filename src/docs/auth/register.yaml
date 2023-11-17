@@ -1,0 +1,23 @@
+User Registration
+---
+tags:
+  - Authentication
+parameters:
+  - name: body
+    description: The body should contain the user Registration data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "url"
+      properties:
+        email:
+          type: "url"
+          example: "https://www.google.com/"
+responses:
+  201:
+    description: When the bookmark was successfully edited
+
+  400:
+    description: Fails to Register due to bad request data
